@@ -6,7 +6,7 @@ import {toInteger, assignmentForDestroy} from '../util';
 import {defaultShapeStrokeValus} from '../consts';
 
 const SHAPE_DEFAULT_OPTION = {
-    stroke: '#ffbb3b',
+    stroke: '#ff4040',
     fill: '',
     strokeWidth: 3
 };
@@ -40,7 +40,7 @@ class Shape extends Submenu {
                 this.selector('.tie-color-fill'), '', this.toggleDirection, this.usageStatistics
             ),
             strokeColorpicker: new Colorpicker(
-                this.selector('.tie-color-stroke'), '#ffbb3b', this.toggleDirection, this.usageStatistics
+                this.selector('.tie-color-stroke'), '#ff4040', this.toggleDirection, this.usageStatistics
             )
         };
 
