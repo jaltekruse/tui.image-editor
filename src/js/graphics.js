@@ -910,13 +910,14 @@ class Graphics {
       });
       // add more grid lines if we have zoomed or panned enough
       while (vGridLines[0].x1 - gridStep > canvas.vptCoords.tl.x) {
-          let line = new fabric.Line([ vGridLines[0].x1 - gridStep, 0, vGridLines[0].x1 - gridStep, 600],
+          let line = new fabric.Line([ vGridLines[0].x1 - gridStep, canvasYOrigin, vGridLines[0].x1 - gridStep, canvasHeight],
                                      { stroke: '#0cc', selectable: false })
           vGridLines.unshift(line);
           canvas.add(line);
       }
       while (vGridLines[vGridLines.length - 1].x1 + gridStep < canvas.vptCoords.tr.x) {
-          let line = new fabric.Line([ vGridLines[vGridLines.length - 1].x1 + gridStep, 0, vGridLines[vGridLines.length - 1].x1 + gridStep, 600],
+          let line = new fabric.Line([ vGridLines[vGridLines.length - 1].x1 + gridStep, canvasYOrigin,
+                                     vGridLines[vGridLines.length - 1].x1 + gridStep, canvasHeight],
                                      { stroke: '#c0c', selectable: false })
           vGridLines.push(line);
           canvas.add(line);
@@ -1012,7 +1013,7 @@ class Graphics {
         // create grid
         var inset = 0;
 
-        this._canvas.renderAll()
+        this._canvas.renderAll();
         console.log(canvas.vptCoords.br.x);
         let canvasHeight = canvas.vptCoords.br.y;
         let canvasWidth = canvas.vptCoords.br.x;
