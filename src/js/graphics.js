@@ -883,14 +883,6 @@ class Graphics {
       enableRetinaScaling: false,
       uniformScaling: false,
     });
-    let json = {"version":"4.2.0","objects":[{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":525.59,"top":231.78,"width":429.21,"height":209.31,"fill":"","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":214.60714285714283,"ry":104.65380761523048},{"type":"rect","version":"4.2.0","originX":"center","originY":"center","left":283.31,"top":196.38,"width":357.7,"height":186.78,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    json = {"version":"4.2.0","objects":[{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":583.45,"top":230.17,"width":429.21,"height":209.31,"fill":"#2a2a2a","stroke":"#ff6518","strokeWidth":2,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"radius":0,"startAngle":0,"endAngle":6.283185307179586},{"type":"rect","version":"4.2.0","originX":"center","originY":"center","left":283.31,"top":194.77,"width":357.7,"height":186.78,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0},{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":367.98,"top":383.74,"width":381,"height":188.39,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":190.5,"ry":94.1938877755511},{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":833.25,"top":357.19,"width":498.32,"height":148.16,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":249.16071428571428,"ry":74.07865731462925}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    json =
-    {"version":"4.2.0","objects":[{"type":"triangle","version":"4.2.0","originX":"center","originY":"center","left":621.78,"top":326.09,"width":340.34,"height":378.6,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}}
-    json =
-    {"version":"4.2.0","objects":[{"type":"triangle","version":"4.2.0","originX":"center","originY":"center","left":339.09,"top":169.42,"width":340.34,"height":378.6,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0},{"type":"ellipse","version":"4.2.0","originX":"center","originY":"center","left":702.03,"top":433.83,"width":494.6,"height":229.63,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":247.30213047288794,"ry":114.81535362667705}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    //json =
-    //{"version":"4.2.0","objects":[{"type":"rect","version":"4.2.0","originX":"left","originY":"top","left":499,"top":173,"width":50,"height":50,"fill":"rgba(0,0,0,0)","stroke":"#000000","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":0.8,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0}]};
 
     let canvas = this._canvas;
     let vGridLines = [];
@@ -947,19 +939,19 @@ class Graphics {
 
       // if we have zoomed or panned enough to move grid lines out of the viewport, remove them
       while (hGridLines[0].y1 < canvas.vptCoords.tl.y) {
-          let line = hGridLines.splice(0,1);
+          let line = hGridLines.splice(0,1)[0];
           canvas.remove(line);
       }
       while (hGridLines[hGridLines.length - 1].y1 > canvas.vptCoords.br.y) {
-          let line = hGridLines.splice(hGridLines.length - 1,1);
+          let line = hGridLines.splice(hGridLines.length - 1,1)[0];
           canvas.remove(line);
       }
       while (vGridLines[0].x1 < canvas.vptCoords.tl.x) {
-          let line = vGridLines.splice(0,1);
+          let line = vGridLines.splice(0,1)[0];
           canvas.remove(line);
       }
       while (vGridLines[vGridLines.length - 1].x1 > canvas.vptCoords.br.x) {
-          let line = vGridLines.splice(vGridLines.length - 1, 1);
+          let line = vGridLines.splice(vGridLines.length - 1, 1)[0];
           canvas.remove(line);
       }
       // if the grid is getting really dense remove some lines
@@ -984,7 +976,9 @@ class Graphics {
       console.log("lengths");
       console.log(hGridLines.length);
       console.log(vGridLines.length);
-      // add more grid lines if we have zoomed
+      console.log(vGridLines.length + hGridLines.length);
+      console.log(canvas.getObjects().length);
+      // add more grid lines if we have zoomed in enough
       if (hGridLines.length < 5 || vGridLines.length < 5) {
 
         gridStep = gridStep / 2;
@@ -1003,6 +997,14 @@ class Graphics {
           canvas.add(line);
         }
       }
+
+      var zoom = canvas.getZoom();
+      vGridLines.forEach(function(line) {
+          line.strokeWidth = 1 / zoom;
+      });
+      hGridLines.forEach(function(line) {
+          line.strokeWidth = 1 / zoom;
+      });
     };
 
 
@@ -1070,12 +1072,6 @@ class Graphics {
       if (zoom < 0.1) zoom = 0.1;
       // TODO - I'm pretty sure this is a little off
       canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
-      vGridLines.forEach(function(line) {
-          line.strokeWidth = 1 / zoom;
-      });
-      hGridLines.forEach(function(line) {
-          line.strokeWidth = 1 / zoom;
-      });
       fixGrid();
       opt.e.preventDefault();
       opt.e.stopPropagation();
