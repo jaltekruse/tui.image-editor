@@ -34,9 +34,10 @@ import { extend } from 'tui-code-snippet';
 
 const SHAPE_INIT_OPTIONS = extend(
   {
-    strokeWidth: 1,
+    strokeWidth: 5,
     stroke: '#000000',
     fill: '#ffffff',
+    strokeUniform: true,
     width: 1,
     height: 1,
     rx: 0,
@@ -155,7 +156,7 @@ export default class Shape extends Component {
 
     canvas.defaultCursor = 'crosshair';
     canvas.selection = false;
-    canvas.uniformScaling = true;
+    canvas.uniformScaling = false;
     canvas.on({
       'mouse:down': this._handlers.mousedown,
     });
@@ -335,14 +336,7 @@ export default class Shape extends Component {
         instance = new fabric.Rect(options);
         break;
       case 'circle':
-        instance = new fabric.Ellipse(
-          extend(
-            {
-              type: 'circle',
-            },
-            options
-          )
-        );
+        instance = new fabric.Ellipse(options);
         break;
       case 'triangle':
         instance = new fabric.Triangle(options);
@@ -386,7 +380,7 @@ export default class Shape extends Component {
       selected() {
         self._isSelected = true;
         self._shapeObj = this;
-        canvas.uniformScaling = true;
+        canvas.uniformScaling = false;
         canvas.defaultCursor = 'default';
         resizeHelper.setOrigins(self._shapeObj);
       },

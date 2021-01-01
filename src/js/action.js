@@ -99,6 +99,7 @@ export default {
           if (!isSupportFileApi()) {
             alert('This browser does not support file-api');
           }
+          console.log(file);
 
           this.ui.initializeImgUrl = URL.createObjectURL(file);
           this.loadImageFromFile(file)
@@ -111,6 +112,8 @@ export default {
             ['catch']((message) => Promise.reject(message));
         },
         download: () => {
+          console.log(this);
+          console.log(this._graphics._canvas.toJSON());
           const dataURL = this.toDataURL();
           let imageName = this.getImageName();
           let blob, type, w;
@@ -416,7 +419,7 @@ export default {
 
         if (obj.type === 'cropzone') {
           this.ui.crop.changeApplyButtonStatus(true);
-        } else if (['rect', 'circle', 'triangle'].indexOf(obj.type) > -1) {
+        } else if (['rect', 'circle', 'ellipse', 'triangle'].indexOf(obj.type) > -1) {
           this.stopDrawingMode();
           if (this.ui.submenu !== 'shape') {
             this.ui.changeMenu('shape', false, false);
@@ -462,7 +465,7 @@ export default {
       addObjectAfter: (obj) => {
         if (obj.type === 'icon') {
           this.ui.icon.changeStandbyMode();
-        } else if (['rect', 'circle', 'triangle'].indexOf(obj.type) > -1) {
+        } else if (['rect', 'circle', 'ellipse', 'triangle'].indexOf(obj.type) > -1) {
           this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
           this.ui.shape.changeStandbyMode();
         }
@@ -470,16 +473,18 @@ export default {
       objectScaled: (obj) => {
         if (['i-text', 'text'].indexOf(obj.type) > -1) {
           this.ui.text.fontSize = toInteger(obj.fontSize);
-        } else if (['rect', 'circle', 'triangle'].indexOf(obj.type) >= 0) {
+        } else if (['rect', 'circle', 'ellipse', 'triangle'].indexOf(obj.type) >= 0) {
           const { width, height } = obj;
           const strokeValue = this.ui.shape.getStrokeValue();
 
+          /*
           if (width < strokeValue) {
             this.ui.shape.setStrokeValue(width);
           }
           if (height < strokeValue) {
             this.ui.shape.setStrokeValue(height);
           }
+          */
         }
       },
       selectionCleared: () => {

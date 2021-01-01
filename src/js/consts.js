@@ -59,6 +59,7 @@ export const SHAPE_DEFAULT_OPTIONS = {
   lockSkewingX: true,
   lockSkewingY: true,
   bringForward: true,
+  strokeUniform: true,
   isRegular: false,
 };
 

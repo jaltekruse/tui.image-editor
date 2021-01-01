@@ -5,6 +5,7 @@
 const DIVISOR = {
   rect: 1,
   circle: 2,
+  ellipse: 2,
   triangle: 1,
 };
 const DIMENSION_KEYS = {
@@ -13,6 +14,10 @@ const DIMENSION_KEYS = {
     h: 'height',
   },
   circle: {
+    w: 'rx',
+    h: 'ry',
+  },
+  ellipse: {
     w: 'rx',
     h: 'ry',
   },
@@ -154,6 +159,7 @@ function adjustDimensionOnMouseMove(pointer, shape) {
   let width = Math.abs(origin.x - pointer.x) / divisor;
   let height = Math.abs(origin.y - pointer.y) / divisor;
 
+  // TODO - review
   if (width > strokeWidth) {
     width -= strokeWidth / divisor;
   }

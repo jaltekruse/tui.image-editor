@@ -132,6 +132,8 @@ class Line extends Component {
     this._line = new ArrowLine(points, {
       stroke: this._oColor.toRgba(),
       strokeWidth: this._width,
+      strokeUniform: true,
+      noScaleCache: false,
       arrowType: this._arrowType,
       evented: false,
     });
