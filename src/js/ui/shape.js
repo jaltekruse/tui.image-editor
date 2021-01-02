@@ -106,11 +106,11 @@ class Shape extends Submenu {
    *   @param {string} fillColor - fill color
    */
   setShapeStatus({ strokeWidth, strokeColor, fillColor }) {
-    console.log("setShapeStatus", strokeWidth);
+    console.log('setShapeStatus', strokeWidth);
     try {
-        throw "testing";
+      throw 'testing';
     } catch (e) {
-        console.log(e);
+      console.log(e);
     }
     this._els.strokeRange.value = strokeWidth;
     this._els.strokeColorpicker.color = strokeColor;
@@ -201,13 +201,12 @@ class Shape extends Submenu {
    * @private
    */
   _changeStrokeRangeHandler(value, isLast) {
-
     try {
-        throw Error("testing");
+      throw Error('testing');
     } catch (e) {
-        console.log(e);
+      console.log(e);
     }
-    console.log("_changeStrokeRangeHandler", value, isLast);
+    console.log('_changeStrokeRangeHandler', value, isLast);
     // TODO - review
     this.options.strokeWidth = value;
     //this.options.strokeWidth = toInteger(value);
