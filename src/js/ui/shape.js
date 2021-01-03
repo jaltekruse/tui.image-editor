@@ -2,7 +2,7 @@ import Colorpicker from './tools/colorpicker';
 import Range from './tools/range';
 import Submenu from './submenuBase';
 import templateHtml from './template/submenu/shape';
-import { toInteger, assignmentForDestroy } from '../util';
+import assignmentForDestroy from '../util';
 import { defaultShapeStrokeValus } from '../consts';
 
 const SHAPE_DEFAULT_OPTION = {
@@ -108,7 +108,7 @@ class Shape extends Submenu {
   setShapeStatus({ strokeWidth, strokeColor, fillColor }) {
     console.log('setShapeStatus', strokeWidth);
     try {
-      throw 'testing';
+      throw new Error('testing');
     } catch (e) {
       console.log(e);
     }
@@ -209,7 +209,7 @@ class Shape extends Submenu {
     console.log('_changeStrokeRangeHandler', value, isLast);
     // TODO - review
     this.options.strokeWidth = value;
-    //this.options.strokeWidth = toInteger(value);
+    // this.options.strokeWidth = toInteger(value);
     this.actions.changeShape(
       {
         strokeWidth: value,

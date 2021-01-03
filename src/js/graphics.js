@@ -918,7 +918,7 @@ class Graphics {
 
       // add more grid lines if we have zoomed or panned enough
       while (vGridLines[0].x1 - gridStep > canvas.vptCoords.tl.x) {
-        let line = new fabric.Line(
+        const line = new fabric.Line(
           [vGridLines[0].x1 - gridStep, canvasYTop, vGridLines[0].x1 - gridStep, canvasYBottom],
           { stroke: '#0cc', selectable: false }
         );
@@ -926,7 +926,7 @@ class Graphics {
         canvas.add(line);
       }
       while (vGridLines[vGridLines.length - 1].x1 + gridStep < canvas.vptCoords.tr.x) {
-        let line = new fabric.Line(
+        const line = new fabric.Line(
           [
             vGridLines[vGridLines.length - 1].x1 + gridStep,
             canvasYTop,
@@ -941,7 +941,7 @@ class Graphics {
       // if we have zoomed or panned enough to expose move viewport, add more lines
       while (hGridLines[0].y1 - gridStep > canvas.vptCoords.tl.y) {
         // console.log("add line");
-        let line = new fabric.Line(
+        const line = new fabric.Line(
           [canvasXLeft, hGridLines[0].y1 - gridStep, canvasXRight, hGridLines[0].y1 - gridStep],
           { stroke: '#cc0', selectable: false }
         );
@@ -949,7 +949,7 @@ class Graphics {
         canvas.add(line);
       }
       while (hGridLines[hGridLines.length - 1].y1 + gridStep < canvas.vptCoords.br.y) {
-        let line = new fabric.Line(
+        const line = new fabric.Line(
           [
             canvasXLeft,
             hGridLines[hGridLines.length - 1].y1 + gridStep,
@@ -964,19 +964,19 @@ class Graphics {
 
       // if we have zoomed or panned enough to move grid lines out of the viewport, remove them
       while (hGridLines[0].y1 < canvas.vptCoords.tl.y) {
-        let line = hGridLines.splice(0, 1)[0];
+        const [line] = hGridLines.splice(0, 1);
         canvas.remove(line);
       }
       while (hGridLines[hGridLines.length - 1].y1 > canvas.vptCoords.br.y) {
-        let line = hGridLines.splice(hGridLines.length - 1, 1)[0];
+        const [line] = hGridLines.splice(hGridLines.length - 1, 1);
         canvas.remove(line);
       }
       while (vGridLines[0].x1 < canvas.vptCoords.tl.x) {
-        let line = vGridLines.splice(0, 1)[0];
+        const [line] = vGridLines.splice(0, 1);
         canvas.remove(line);
       }
       while (vGridLines[vGridLines.length - 1].x1 > canvas.vptCoords.br.x) {
-        let line = vGridLines.splice(vGridLines.length - 1, 1)[0];
+        const [line] = vGridLines.splice(vGridLines.length - 1, 1);
         canvas.remove(line);
       }
       // if the grid is getting really dense remove some lines
@@ -986,14 +986,14 @@ class Graphics {
         // 1, 2, 3, 4, 5, 6
         // 1,    3, 5, 5, 6
         // 1,    3,    5, 6
-        for (let i = 1; i < hGridLines.length; i++) {
+        for (let i = 1; i < hGridLines.length; i += 1) {
           // console.log("remove line");
-          let line = hGridLines.splice(i, 1)[0];
+          const [line] = hGridLines.splice(i, 1);
           canvas.remove(line);
         }
-        for (let i = 1; i < vGridLines.length; i++) {
+        for (let i = 1; i < vGridLines.length; i += 1) {
           // console.log("remove line");
-          let line = vGridLines.splice(i, 1)[0];
+          const [line] = vGridLines.splice(i, 1);
           canvas.remove(line);
         }
         gridStep = gridStep * 2;
@@ -1005,7 +1005,7 @@ class Graphics {
         // 1, 1_5, 2, 2_5, 3, 3_5, 4, 5, 6
         for (let i = 0; i < hGridLines.length; i += 2) {
           // console.log("add horz line");
-          let line = new fabric.Line(
+          const line = new fabric.Line(
             [canvasXLeft, hGridLines[i].y1 + gridStep, canvasXRight, hGridLines[i].y1 + gridStep],
             { stroke: '#c00', selectable: false }
           );
@@ -1014,7 +1014,7 @@ class Graphics {
         }
         for (let i = 0; i < vGridLines.length; i += 2) {
           // console.log("add vert line");
-          let line = new fabric.Line(
+          const line = new fabric.Line(
             [vGridLines[i].x1 + gridStep, canvasYTop, vGridLines[i].x1 + gridStep, canvasYBottom],
             { stroke: '#0c0', selectable: false }
           );
@@ -1033,12 +1033,12 @@ class Graphics {
       console.log(canvas.getObjects().length);
       */
 
-      let zoom = canvas.getZoom();
+      const zoom = canvas.getZoom();
       vGridLines.forEach(function (line) {
-        line.strokeWidth = 1 / zoom;
+        line.strokeWidth = 2 / zoom;
       });
       hGridLines.forEach(function (line) {
-        line.strokeWidth = 1 / zoom;
+        line.strokeWidth = 2 / zoom;
       });
     };
 
@@ -1049,9 +1049,9 @@ class Graphics {
     // to draw the grid
     window.setTimeout(
       function () {
-        let canvasHeight = canvas.vptCoords.br.y;
-        let canvasWidth = canvas.vptCoords.br.x;
-        for (let i = 1; i < 600 / gridStep; i++) {
+        const canvasHeight = canvas.vptCoords.br.y;
+        const canvasWidth = canvas.vptCoords.br.x;
+        for (let i = 1; i < 600 / gridStep; i += 1) {
           let line = new fabric.Line(
             [inset + i * gridStep, inset, inset + i * gridStep, canvasHeight],
             { stroke: '#ccc', selectable: false }
@@ -1073,7 +1073,7 @@ class Graphics {
     );
 
     canvas.on('mouse:wheel', function (opt) {
-      let delta = opt.e.deltaY;
+      const delta = opt.e.deltaY;
       let zoom = canvas.getZoom();
       zoom *= Math.pow(0.999, delta);
       if (zoom > 20) zoom = 20;
@@ -1087,20 +1087,20 @@ class Graphics {
 
     // Handle right-button clicks.
     function startPan(event) {
-      if (event.button != 2) {
+      if (event.button !== 2) {
         return;
       }
       let x0 = event.screenX,
         y0 = event.screenY;
-      function continuePan(event) {
-        let x = event.screenX,
-          y = event.screenY;
+      function continuePan(evt) {
+        const x = evt.screenX,
+          y = evt.screenY;
         canvas.relativePan({ x: x - x0, y: y - y0 });
         fixGrid();
         x0 = x;
         y0 = y;
       }
-      function stopPan(event) {
+      function stopPan() {
         window.removeEventListener('mousemove', continuePan);
         window.removeEventListener('mouseup', stopPan);
       }
@@ -1109,9 +1109,9 @@ class Graphics {
       window.addEventListener('oncontextmenu', cancelMenu);
     }
     function cancelMenu(evt) {
-      //$(window).off('contextmenu', cancelMenu);
       evt.preventDefault();
       evt.stopPropagation();
+
       return false;
     }
     selectedElement.addEventListener('mousedown', startPan);
@@ -1425,13 +1425,16 @@ class Graphics {
    * Canvas Selectable status change
    * @param {boolean} selectable - expect status
    */
+  changeSelectableAll() {}
+  /*
   changeSelectableAll(selectable) {
     this._canvas.forEachObject((obj) => {
       // TODO - review this
-      //obj.selectable = selectable;
-      //obj.hoverCursor = selectable ? 'move' : 'crosshair';
+      // obj.selectable = selectable;
+      // obj.hoverCursor = selectable ? 'move' : 'crosshair';
     });
   }
+  */
 
   /**
    * Return object's properties
