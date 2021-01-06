@@ -107,11 +107,6 @@ class Shape extends Submenu {
    */
   setShapeStatus({ strokeWidth, strokeColor, fillColor }) {
     console.log('setShapeStatus', strokeWidth);
-    try {
-      throw new Error('testing');
-    } catch (e) {
-      console.log(e);
-    }
     this._els.strokeRange.value = strokeWidth;
     this._els.strokeColorpicker.color = strokeColor;
     this._els.fillColorpicker.color = fillColor;
@@ -201,11 +196,6 @@ class Shape extends Submenu {
    * @private
    */
   _changeStrokeRangeHandler(value, isLast) {
-    try {
-      throw Error('testing');
-    } catch (e) {
-      console.log(e);
-    }
     console.log('_changeStrokeRangeHandler', value, isLast);
     // TODO - review
     this.options.strokeWidth = value;
