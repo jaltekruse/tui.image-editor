@@ -1066,6 +1066,39 @@ class Graphics {
           hGridLines.push(line);
           canvas.add(line);
         }
+        /*
+        var renderControl = function(ctx, left, top, styleOverride, fabricObject) {
+            var size = this.cornerSize;
+            ctx.save();
+            ctx.translate(left, top);
+            ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
+            ctx.fillStyle = 'green';
+            ctx.beginPath();
+            ctx.arc(0, 0, size/4, 0, Math.PI * 2, true);
+            ctx.fill();
+            ctx.restore();
+        }
+        var testLine = new fabric.Line([30, 30, 300, 300], { stroke: '#000', strokeUniform: true, strokeWidth: 5});
+        testLine.controls.deleteControl = new fabric.Control({
+          x: 0.25,
+          y: 0.25,
+          offsetY: 16,
+          cursorStyle: 'pointer',
+          mouseUpHandler: function(){},
+          actionHandler: function(eventData, transform, x, y) {
+              var target = transform.target,
+                  localPoint = fabric.controlsUtils.getLocalPoint(
+                                    transform, transform.originX, transform.originY, x, y),
+                  strokePadding = target.strokeWidth / (target.strokeUniform ? target.scaleX : 1),
+                  newWidth = Math.abs(localPoint.x / target.scaleX) - strokePadding;
+              target.set('width', Math.max(newWidth, 0));
+              return true;
+            },
+          render: renderControl,
+          cornerSize: 50
+        });
+        canvas.add(testLine);
+        */
         fixGrid();
         this._canvas.renderAll();
       }.bind(this),
