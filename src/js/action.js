@@ -99,7 +99,6 @@ export default {
           if (!isSupportFileApi()) {
             alert('This browser does not support file-api');
           }
-          console.log(file);
 
           this.ui.initializeImgUrl = URL.createObjectURL(file);
           this.loadImageFromFile(file)
@@ -112,8 +111,6 @@ export default {
             ['catch']((message) => Promise.reject(message));
         },
         download: () => {
-          console.log(this);
-          console.log(this._graphics._canvas.toJSON());
           const dataURL = this.toDataURL();
           let imageName = this.getImageName();
           let blob, type, w;

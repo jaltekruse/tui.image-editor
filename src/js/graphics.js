@@ -883,235 +883,6 @@ class Graphics {
       enableRetinaScaling: false,
       uniformScaling: false,
     });
-    let json = {"version":"4.2.0","objects":[{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":525.59,"top":231.78,"width":429.21,"height":209.31,"fill":"","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":214.60714285714283,"ry":104.65380761523048},{"type":"rect","version":"4.2.0","originX":"center","originY":"center","left":283.31,"top":196.38,"width":357.7,"height":186.78,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    json = {"version":"4.2.0","objects":[{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":583.45,"top":230.17,"width":429.21,"height":209.31,"fill":"#2a2a2a","stroke":"#ff6518","strokeWidth":2,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"radius":0,"startAngle":0,"endAngle":6.283185307179586},{"type":"rect","version":"4.2.0","originX":"center","originY":"center","left":283.31,"top":194.77,"width":357.7,"height":186.78,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0},{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":367.98,"top":383.74,"width":381,"height":188.39,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":190.5,"ry":94.1938877755511},{"type":"circle","version":"4.2.0","originX":"center","originY":"center","left":833.25,"top":357.19,"width":498.32,"height":148.16,"fill":"transparent","stroke":"#ff6518","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":249.16071428571428,"ry":74.07865731462925}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    json =
-    {"version":"4.2.0","objects":[{"type":"triangle","version":"4.2.0","originX":"center","originY":"center","left":621.78,"top":326.09,"width":340.34,"height":378.6,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}}
-    json =
-    {"version":"4.2.0","objects":[{"type":"triangle","version":"4.2.0","originX":"center","originY":"center","left":339.09,"top":169.42,"width":340.34,"height":378.6,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0},{"type":"ellipse","version":"4.2.0","originX":"center","originY":"center","left":702.03,"top":433.83,"width":494.6,"height":229.63,"fill":"transparent","stroke":"#ff6518","strokeWidth":12,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":247.30213047288794,"ry":114.81535362667705}],"backgroundImage":{"type":"image","version":"4.2.0","originX":"left","originY":"top","left":0,"top":0,"width":1125,"height":803,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":0,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"cropX":0,"cropY":0,"src":"http://localhost:8080/examples/img/sampleImage2.png","crossOrigin":"anonymous","filters":[]}};
-    //json =
-    //{"version":"4.2.0","objects":[{"type":"rect","version":"4.2.0","originX":"left","originY":"top","left":499,"top":173,"width":50,"height":50,"fill":"rgba(0,0,0,0)","stroke":"#000000","strokeWidth":3,"strokeDashArray":null,"strokeLineCap":"butt","strokeDashOffset":0,"strokeLineJoin":"miter","strokeMiterLimit":4,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":0.8,"shadow":null,"visible":true,"backgroundColor":"","fillRule":"nonzero","paintFirst":"fill","globalCompositeOperation":"source-over","skewX":0,"skewY":0,"rx":0,"ry":0}]};
-
-    let canvas = this._canvas;
-    let vGridLines = [];
-    let hGridLines = [];
-
-    var gridStep = 50;
-
-    let fixGrid = function() {
-      let canvasYOrigin = canvas.vptCoords.tr.y;
-      let canvasHeight = canvas.vptCoords.br.y - canvasYOrigin;
-      // adjust veritical line heights to match the viewport
-      vGridLines.forEach(function(line) {
-          line.top = canvasYOrigin;
-          line.height = canvasHeight;
-          line.setCoords();
-      });
-
-      let canvasXOrigin = canvas.vptCoords.tl.x;
-      let canvasWidth = canvas.vptCoords.br.x - canvasXOrigin;
-      // adjust horizontal line lengths to match the viewport
-      hGridLines.forEach(function(line) {
-          line.left = canvasXOrigin;
-          line.width = canvasWidth;
-          line.setCoords();
-      });
-      // add more grid lines if we have zoomed or panned enough
-      while (vGridLines[0].x1 - gridStep > canvas.vptCoords.tl.x) {
-          let line = new fabric.Line([ vGridLines[0].x1 - gridStep, 0, vGridLines[0].x1 - gridStep, 600],
-                                     { stroke: '#0cc', selectable: false })
-          vGridLines.unshift(line);
-          canvas.add(line);
-      }
-      while (vGridLines[vGridLines.length - 1].x1 + gridStep < canvas.vptCoords.tr.x) {
-          let line = new fabric.Line([ vGridLines[vGridLines.length - 1].x1 + gridStep, 0, vGridLines[vGridLines.length - 1].x1 + gridStep, 600],
-                                     { stroke: '#c0c', selectable: false })
-          vGridLines.push(line);
-          canvas.add(line);
-      }
-      // if we have zoomed or panned enough to expose move viewport, add more lines
-      while (hGridLines[0].y1 - gridStep > canvas.vptCoords.tl.y) {
-          console.log("add line");
-          let line = new fabric.Line([ canvasXOrigin, hGridLines[0].y1 - gridStep, canvasWidth, hGridLines[0].y1 - gridStep],
-                                     { stroke: '#cc0', selectable: false })
-          hGridLines.unshift(line);
-          canvas.add(line);
-      }
-      while (hGridLines[hGridLines.length - 1].y1 + gridStep < canvas.vptCoords.br.y) {
-          let line = new fabric.Line([ canvasXOrigin, hGridLines[hGridLines.length - 1].y1 + gridStep,
-                                       canvasWidth, hGridLines[hGridLines.length - 1].y1 + gridStep],
-                                     { stroke: '#00c', selectable: false })
-          hGridLines.push(line);
-          canvas.add(line);
-      }
-
-      // if we have zoomed or panned enough to move grid lines out of the viewport, remove them
-      while (hGridLines[0].y1 < canvas.vptCoords.tl.y) {
-          let line = hGridLines.splice(0,1);
-          canvas.remove(line);
-      }
-      while (hGridLines[hGridLines.length - 1].y1 > canvas.vptCoords.br.y) {
-          let line = hGridLines.splice(hGridLines.length - 1,1);
-          canvas.remove(line);
-      }
-      while (vGridLines[0].x1 < canvas.vptCoords.tl.x) {
-          let line = vGridLines.splice(0,1);
-          canvas.remove(line);
-      }
-      while (vGridLines[vGridLines.length - 1].x1 > canvas.vptCoords.br.x) {
-          let line = vGridLines.splice(vGridLines.length - 1, 1);
-          canvas.remove(line);
-      }
-      // if the grid is getting really dense remove some lines
-      // TODO - may want to make this condition independent of screen size
-      if (hGridLines.length > 30 || vGridLines.length > 30) {
-            console.log("remove lines");
-                // 1, 2, 3, 4, 5, 6
-                // 1,    3, 5, 5, 6
-                // 1,    3,    5, 6
-            for (var i = 1; i < hGridLines.length; i++) {
-                console.log("remove line");
-                let line = hGridLines.splice(i, 1)[0];
-                canvas.remove(line);
-            }
-            for (var i = 1; i < vGridLines.length; i++) {
-                console.log("remove line");
-                let line = vGridLines.splice(i, 1)[0];
-                canvas.remove(line);
-            }
-            gridStep = gridStep * 2;
-      }
-      console.log("lengths");
-      console.log(hGridLines.length);
-      console.log(vGridLines.length);
-      // add more grid lines if we have zoomed
-      if (hGridLines.length < 5 || vGridLines.length < 5) {
-
-        gridStep = gridStep / 2;
-        // 1,      2,      3,      4,    5,    6
-        // 1, 1_5, 2, 2_5, 3, 3_5, 4, 5, 6
-        for (var i = 0; i < hGridLines.length; i +=2 ) {
-          let line = new fabric.Line([ canvasXOrigin, hGridLines[i].y1 + gridStep, canvasWidth, hGridLines[i].y1 + gridStep],
-                                     { stroke: '#c00', selectable: false })
-          hGridLines.splice(i+1, 0, line);
-          canvas.add(line);
-        }
-        for (var i = 0; i < vGridLines.length; i +=2 ) {
-          let line = new fabric.Line([ vGridLines[i].x1 + gridStep, canvasYOrigin, vGridLines[i].x1 + gridStep, canvasWidth],
-                                     { stroke: '#0c0', selectable: false })
-          vGridLines.splice(i+1, 0, line);
-          canvas.add(line);
-        }
-      }
-    };
-
-
-
-        // create grid
-        var inset = 0;
-
-        this._canvas.renderAll()
-        console.log(canvas.vptCoords.br.x);
-        let canvasHeight = canvas.vptCoords.br.y;
-        let canvasWidth = canvas.vptCoords.br.x;
-        for (var i = 1; i < (600 / gridStep); i++) {
-          let line = new fabric.Line([ inset + i * gridStep, inset, inset + i * gridStep, canvasHeight],
-                                     { stroke: '#ccc', selectable: false })
-          vGridLines.push(line);
-          canvas.add(line);
-
-          line = new fabric.Line([ inset, inset + i * gridStep, canvasWidth,inset + i * gridStep],
-                                 { stroke: '#ccc', selectable: false });
-          hGridLines.push(line);
-          canvas.add(line)
-        }
-        fixGrid();
-        this._canvas.renderAll()
-    /*
-    this._canvas.loadFromJSON(json, function() {
-
-    }.bind(this));
-    */
-
-    /*
-    canvas.on('mouse:down', function(opt) {
-      var evt = opt.e;
-      if (evt.altKey === true) {
-        this.isDragging = true;
-        this.selection = false;
-        this.lastPosX = evt.clientX;
-        this.lastPosY = evt.clientY;
-      }
-    });
-    canvas.on('mouse:move', function(opt) {
-      if (this.isDragging) {
-        var e = opt.e;
-        var vpt = this.viewportTransform;
-        vpt[4] += e.clientX - this.lastPosX;
-        vpt[5] += e.clientY - this.lastPosY;
-        this.requestRenderAll();
-        this.lastPosX = e.clientX;
-        this.lastPosY = e.clientY;
-      }
-    });
-    canvas.on('mouse:up', function(opt) {
-      // on mouse up we want to recalculate new interaction
-      // for all objects, so we call setViewportTransform
-      this.setViewportTransform(this.viewportTransform);
-      this.isDragging = false;
-      this.selection = true;
-    });
-    */
-    canvas.on('mouse:wheel', function(opt) {
-      var delta = opt.e.deltaY;
-      var zoom = canvas.getZoom();
-      zoom *= Math.pow(0.999, delta);
-      if (zoom > 20) zoom = 20;
-      if (zoom < 0.1) zoom = 0.1;
-      // TODO - I'm pretty sure this is a little off
-      canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
-      vGridLines.forEach(function(line) {
-          line.strokeWidth = 1 / zoom;
-      });
-      hGridLines.forEach(function(line) {
-          line.strokeWidth = 1 / zoom;
-      });
-      fixGrid();
-      opt.e.preventDefault();
-      opt.e.stopPropagation();
-    });
-
-    // Handle right-button clicks.
-      function startPan(event) {
-        if (event.button != 2) {
-          return;
-        }
-        var x0 = event.screenX,
-            y0 = event.screenY;
-        function continuePan(event) {
-          var x = event.screenX,
-              y = event.screenY;
-          canvas.relativePan({ x: x - x0, y: y - y0 });
-          fixGrid();
-          x0 = x;
-          y0 = y;
-        }
-        function stopPan(event) {
-          window.removeEventListener('mousemove', continuePan);
-          window.removeEventListener('mouseup', stopPan);
-        };
-        window.addEventListener('mousemove', continuePan);
-        window.addEventListener('mouseup', stopPan);
-        window.addEventListener("oncontextmenu", cancelMenu);
-      };
-      function cancelMenu(evt) {
-        //$(window).off('contextmenu', cancelMenu);
-        evt.preventDefault();
-        evt.stopPropagation();
-        return false;
-      }
-      selectedElement.addEventListener("mousedown", startPan);
-      selectedElement.addEventListener("contextmenu", cancelMenu);
   }
 
   /**
@@ -1417,17 +1188,20 @@ class Graphics {
     this._canvas.renderAll();
   }
 
+  changeSelectableAll() {}
   /**
    * Canvas Selectable status change
    * @param {boolean} selectable - expect status
    */
+  /*
   changeSelectableAll(selectable) {
     this._canvas.forEachObject((obj) => {
       // TODO - review this
-      //obj.selectable = selectable;
-      //obj.hoverCursor = selectable ? 'move' : 'crosshair';
+      // obj.selectable = selectable;
+      // obj.hoverCursor = selectable ? 'move' : 'crosshair';
     });
   }
+  */
 
   /**
    * Return object's properties
