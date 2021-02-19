@@ -5,14 +5,16 @@ import templateHtml from './template/submenu/shape';
 import { assignmentForDestroy } from '../util';
 import { defaultShapeStrokeValus } from '../consts';
 
-
 /**
  * Shape ui class
  * @class
  * @ignore
  */
 class Shape extends Submenu {
-  constructor(subMenuElement, { locale, makeSvgIcon, menuBarPosition, usageStatistics, defaultColor}) {
+  constructor(
+    subMenuElement,
+    { locale, makeSvgIcon, menuBarPosition, usageStatistics, defaultColor }
+  ) {
     super(subMenuElement, {
       locale,
       name: 'shape',
