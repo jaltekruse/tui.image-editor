@@ -29,7 +29,7 @@ class Colorpicker {
     colorpickerElement,
     defaultColor = '#7e7e7e',
     toggleDirection = 'up',
-    usageStatistics
+    usageStatistics = false
   ) {
     this.colorpickerElement = colorpickerElement;
     this.usageStatistics = usageStatistics;

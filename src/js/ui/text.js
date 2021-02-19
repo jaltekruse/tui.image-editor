@@ -11,7 +11,7 @@ import { defaultTextRangeValus } from '../consts';
  * @ignore
  */
 export default class Text extends Submenu {
-  constructor(subMenuElement, { locale, makeSvgIcon, menuBarPosition, usageStatistics }) {
+  constructor(subMenuElement, { locale, makeSvgIcon, menuBarPosition, usageStatistics, defaultColor}) {
     super(subMenuElement, {
       locale,
       name: 'text',
@@ -19,6 +19,7 @@ export default class Text extends Submenu {
       menuBarPosition,
       templateHtml,
       usageStatistics,
+      defaultColor,
     });
     this.effect = {
       bold: false,
@@ -31,7 +32,7 @@ export default class Text extends Submenu {
       textAlignButton: this.selector('.tie-text-align-button'),
       textColorpicker: new Colorpicker(
         this.selector('.tie-text-color'),
-        '#ffbb3b',
+        this.defaultColor,
         this.toggleDirection,
         this.usageStatistics
       ),

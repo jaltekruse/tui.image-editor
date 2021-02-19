@@ -5,11 +5,6 @@ import templateHtml from './template/submenu/shape';
 import { assignmentForDestroy } from '../util';
 import { defaultShapeStrokeValus } from '../consts';
 
-const SHAPE_DEFAULT_OPTION = {
-  stroke: '#ffbb3b',
-  fill: '',
-  strokeWidth: 3,
-};
 
 /**
  * Shape ui class
@@ -17,7 +12,7 @@ const SHAPE_DEFAULT_OPTION = {
  * @ignore
  */
 class Shape extends Submenu {
-  constructor(subMenuElement, { locale, makeSvgIcon, menuBarPosition, usageStatistics }) {
+  constructor(subMenuElement, { locale, makeSvgIcon, menuBarPosition, usageStatistics, defaultColor}) {
     super(subMenuElement, {
       locale,
       name: 'shape',
@@ -25,8 +20,15 @@ class Shape extends Submenu {
       menuBarPosition,
       templateHtml,
       usageStatistics,
+      defaultColor,
     });
     this.type = null;
+
+    const SHAPE_DEFAULT_OPTION = {
+      stroke: this.defaultColor,
+      fill: '',
+      strokeWidth: 5,
+    };
     this.options = SHAPE_DEFAULT_OPTION;
 
     this._els = {
@@ -47,7 +49,7 @@ class Shape extends Submenu {
       ),
       strokeColorpicker: new Colorpicker(
         this.selector('.tie-color-stroke'),
-        '#ffbb3b',
+        this.defaultColor,
         this.toggleDirection,
         this.usageStatistics
       ),

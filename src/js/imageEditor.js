@@ -176,6 +176,7 @@ class ImageEditor {
     if (options.includeUI) {
       const UIOption = options.includeUI;
       UIOption.usageStatistics = options.usageStatistics;
+      UIOption.defaultColor = options.defaultColor;
 
       this.ui = new UI(wrapper, UIOption, this.getActions());
       options = this.ui.setUiDefaultSelectionStyle(options);

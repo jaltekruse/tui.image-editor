@@ -15,13 +15,14 @@ class Submenu {
    */
   constructor(
     subMenuElement,
-    { locale, name, makeSvgIcon, menuBarPosition, templateHtml, usageStatistics }
+    { locale, name, makeSvgIcon, menuBarPosition, templateHtml, usageStatistics, defaultColor }
   ) {
     this.subMenuElement = subMenuElement;
     this.menuBarPosition = menuBarPosition;
     this.toggleDirection = menuBarPosition === 'top' ? 'down' : 'up';
     this.colorPickerControls = [];
     this.usageStatistics = usageStatistics;
+    this.defaultColor = defaultColor;
     this.eventHandler = {};
     this._makeSubMenuElement({
       locale,

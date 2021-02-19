@@ -228,23 +228,23 @@ export const defaultRotateRangeValus = {
 };
 
 export const defaultDrawRangeValus = {
-  min: 5,
+  min: 2,
   max: 30,
-  value: 12,
+  value: 5,
 };
 
 export const defaultShapeStrokeValus = {
   realTimeEvent: true,
   min: 2,
-  max: 300,
-  value: 3,
+  max: 30,
+  value: 5,
 };
 
 export const defaultTextRangeValus = {
   realTimeEvent: true,
   min: 10,
   max: 100,
-  value: 50,
+  value: 35,
 };
 
 export const defaultFilterRangeValus = {

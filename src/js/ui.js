@@ -238,6 +238,7 @@ class Ui {
         makeSvgIcon: this.theme.makeMenSvgIconSet.bind(this.theme),
         menuBarPosition: this.options.menuBarPosition,
         usageStatistics: this.options.usageStatistics,
+        defaultColor: this.options.defaultColor,
       });
     });
   }
