@@ -194,7 +194,18 @@ class Ui {
         },
         locale: {},
         menuIconPath: '',
-        menu: ['crop', 'select', 'flip', 'rotate', 'draw', 'shape', 'icon', 'text', 'mask', 'filter'],
+        menu: [
+          'crop',
+          'select',
+          'flip',
+          'rotate',
+          'draw',
+          'shape',
+          'icon',
+          'text',
+          'mask',
+          'filter',
+        ],
         initMenu: '',
         uiSize: {
           width: '100%',
@@ -580,14 +591,13 @@ class Ui {
    * @private
    */
   _changeMenu(menuName, toggle, discardSelection) {
-    console.log('!@@!@!@!!@!@@!@!@!@');
-    console.log("toggle: " + toggle);
-    console.log("discardSelection: " + discardSelection);
     console.log(menuName);
     console.log(this.submenu);
     if (menuName === 'select') {
-        if (!this.submenu || this.submenu === 'select') return;
-        else menuName = this.submenu;
+      if (!this.submenu || this.submenu === 'select') {
+        return;
+      }
+      menuName = this.submenu;
     }
     if (this.submenu) {
       this._buttonElements[this.submenu].classList.remove('active');
