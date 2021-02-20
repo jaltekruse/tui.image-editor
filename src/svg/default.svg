@@ -55,6 +55,11 @@
     <path d="M0 0h24v24H0z" fill="none" stroke="none" />
     <path fill="inherit" stroke="none" d="M11 0h1v24h-1zM19 21v-1h2v-2h1v2a1 1 0 0 1-1 1h-2zm-2 0h-3v-1h3v1zm5-5h-1v-3h1v3zm0-5h-1V8h1v3zm0-5h-1V4h-2V3h2a1 1 0 0 1 1 1v2zm-5-3v1h-3V3h3zM9 3v1H2v16h7v1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7z"/>
 </symbol>
+<symbol id="ic-select" viewBox="0 0 24 24">
+    <path d="M0 0h24v24H0z" fill="none" stroke="none" />
+    <path fill="inherit" stroke="none" d="M 6.1002387,13.947494 19.102626,2.9498807 18.758948,18.78759 14.577565,16.610978 12.572793,21.422435 9.0214798,19.904535 11.19809,15.494034 Z"
+    />
+</symbol>
 <symbol id="ic-icon-arrow-2" viewBox="0 0 32 32">
     <path fill="none" stroke="inherit" stroke-linecap="round" stroke-linejoin="round" d="M21.793 18.5H2.5v-5h18.935l-7.6-8h5.872l10.5 10.5-10.5 10.5h-5.914l8-8z"/>
 </symbol>

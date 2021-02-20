@@ -50,9 +50,15 @@
           theme: whiteTheme, // or whiteTheme
           initMenu: 'filter',
           menuBarPosition: 'bottom',
+          menu: ['select', 'flip', 'draw', 'shape', 'text'],
+          initMenu: 'draw',
         },
         cssMaxWidth: 700,
         cssMaxHeight: 500,
+        selectionStyle: {
+            cornerColor: 'green',
+            cornerSize: '10'
+        },
         usageStatistics: false,
         defaultColor: '#ff4040'
       });

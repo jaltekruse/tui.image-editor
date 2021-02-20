@@ -8,6 +8,7 @@ import Theme from './ui/theme/theme';
 import Shape from './ui/shape';
 import Crop from './ui/crop';
 import Flip from './ui/flip';
+import Select from './ui/select';
 import Rotate from './ui/rotate';
 import Text from './ui/text';
 import Mask from './ui/mask';
@@ -20,6 +21,7 @@ const SUB_UI_COMPONENT = {
   Shape,
   Crop,
   Flip,
+  Select,
   Rotate,
   Text,
   Mask,
@@ -192,7 +194,7 @@ class Ui {
         },
         locale: {},
         menuIconPath: '',
-        menu: ['crop', 'flip', 'rotate', 'draw', 'shape', 'icon', 'text', 'mask', 'filter'],
+        menu: ['crop', 'select', 'flip', 'rotate', 'draw', 'shape', 'icon', 'text', 'mask', 'filter'],
         initMenu: '',
         uiSize: {
           width: '100%',
@@ -578,6 +580,15 @@ class Ui {
    * @private
    */
   _changeMenu(menuName, toggle, discardSelection) {
+    console.log('!@@!@!@!!@!@@!@!@!@');
+    console.log("toggle: " + toggle);
+    console.log("discardSelection: " + discardSelection);
+    console.log(menuName);
+    console.log(this.submenu);
+    if (menuName === 'select') {
+        if (!this.submenu || this.submenu === 'select') return;
+        else menuName = this.submenu;
+    }
     if (this.submenu) {
       this._buttonElements[this.submenu].classList.remove('active');
       this._mainElement.classList.remove(`tui-image-editor-menu-${this.submenu}`);
@@ -589,7 +600,9 @@ class Ui {
     }
 
     if (this.submenu === menuName && toggle) {
-      this.submenu = null;
+      this.submenu = 'select';
+      this._buttonElements[this.submenu].classList.add('active');
+      this[this.submenu].changeStartMode();
     } else {
       this._buttonElements[menuName].classList.add('active');
       this._mainElement.classList.add(`tui-image-editor-menu-${menuName}`);
