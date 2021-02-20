@@ -14,13 +14,21 @@
 
 /* DRAW BUTTON */
 .tie-draw-line-select-button
-  &.line .{prefix}-button.line svg > use.normal,
-  &.free .{prefix}-button.free svg > use.normal
-    display: none;
+  &.line .{prefix}-button.line
+    svg > use.normal
+        display: none;
+  &.free .{prefix}-button.free
+    svg > use.normal
+        display: none;
 
-  &.line .{prefix}-button.line svg > use.active,
-  &.free .{prefix}-button.free svg > use.active
-    display: block;
+  &.line .{prefix}-button.line
+    background-color: #e1e1e1
+    svg > use.active
+        display: block;
+  &.free .{prefix}-button.free
+    background-color: #e1e1e1
+    svg > use.active
+        display: block;
 
 /* FLIP BUTTON */
 .tie-flip-button
@@ -55,6 +63,7 @@
   &.rect .{prefix}-button.rect,
   &.circle .{prefix}-button.circle,
   &.triangle .{prefix}-button.triangle
+    background-color: #e1e1e1
     svg > use.normal
         display: none;
     svg > use.active
