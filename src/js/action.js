@@ -427,7 +427,7 @@ export default {
             fillColor: obj.fill,
           });
 
-          this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
+          //this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
         } else if (obj.type === 'path' || obj.type === 'line') {
           if (this.ui.submenu !== 'draw') {
             this.ui.changeMenu('draw', false, false);
@@ -463,7 +463,7 @@ export default {
         if (obj.type === 'icon') {
           this.ui.icon.changeStandbyMode();
         } else if (['rect', 'circle', 'ellipse', 'triangle'].indexOf(obj.type) > -1) {
-          this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
+          //this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
           this.ui.shape.changeStandbyMode();
         }
       },
