@@ -190,10 +190,12 @@ body > textarea {
   border: 1px solid rgba(255,255,255,0.7);
 }
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor,
+.tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-select .tui-image-editor,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor {
   transition: none;
 }
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-grid-visual,
+.tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-select .tui-image-editor-grid-visual,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-grid-visual {
   display: block;
 }
@@ -314,6 +316,7 @@ body > textarea {
 }
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-crop .tui-image-editor-submenu > div.tui-image-editor-menu-crop,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-submenu > div.tui-image-editor-menu-flip,
+.tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-select .tui-image-editor-submenu > div.tui-image-editor-menu-flip,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-submenu > div.tui-image-editor-menu-rotate,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-shape .tui-image-editor-submenu > div.tui-image-editor-menu-shape,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-text .tui-image-editor-submenu > div.tui-image-editor-menu-text,
@@ -325,6 +328,7 @@ body > textarea {
 }
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-crop .tui-image-editor-submenu,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-flip .tui-image-editor-submenu,
+.tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-select .tui-image-editor-submenu,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-rotate .tui-image-editor-submenu,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-shape .tui-image-editor-submenu,
 .tui-image-editor-container .tui-image-editor-main.tui-image-editor-menu-text .tui-image-editor-submenu,

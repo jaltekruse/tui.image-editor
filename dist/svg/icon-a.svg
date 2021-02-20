@@ -168,10 +168,18 @@
         <path stroke="#434343" stroke-linecap="square" d="M13 1l-2.5 2.5L13 6"/>
     </g>
 </symbol><symbol id="icon-a-ic-select" viewBox="0 0 24 24">
-    <g fill="none" fill-rule="evenodd">
-        <path d="M0 0h24v24H0z"/>
-        <path fill="#434343" d="M11 0h1v24h-1zM19 21v-1h2v-2h1v2a1 1 0 0 1-1 1h-2zm-2 0h-3v-1h3v1zm5-5h-1v-3h1v3zm0-5h-1V8h1v3zm0-5h-1V4h-2V3h2a1 1 0 0 1 1 1v2zm-5-3v1h-3V3h3zM9 3v1H2v16h7v1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7z"/>
-    </g>
+  <metadata id="metadata74">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1842" inkscape:window-height="1016" id="namedview70" showgrid="false" inkscape:zoom="34.916667" inkscape:cx="6.9164678" inkscape:cy="13.145585" inkscape:window-x="78" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="svg68"/>
+  <path style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.38725489" d="M 6.1002387,13.947494 19.102626,2.9498807 18.758948,18.78759 14.577565,16.610978 12.572793,21.422435 9.0214798,19.904535 11.19809,15.494034 Z" id="path76" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc"/>
 </symbol><symbol id="icon-a-ic-shape-circle" viewBox="0 0 32 32">
     <g fill="none" fill-rule="evenodd">
         <circle cx="16" cy="16" r="14.5" stroke="#434343"/>
