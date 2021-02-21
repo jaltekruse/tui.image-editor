@@ -93,7 +93,7 @@ export default {
           exitCropOnAction();
           this.clearObjects();
           this.ui.changeHelpButtonEnabled('delete', false);
-          this.ui.changeHelpButtonEnabled('deleteAll', false);
+          // this.ui.changeHelpButtonEnabled('deleteAll', false);
         },
         load: (file) => {
           if (!isSupportFileApi()) {
@@ -392,10 +392,10 @@ export default {
       undoStackChanged: (length) => {
         if (length) {
           this.ui.changeHelpButtonEnabled('undo', true);
-          this.ui.changeHelpButtonEnabled('reset', true);
+          // this.ui.changeHelpButtonEnabled('reset', true);
         } else {
           this.ui.changeHelpButtonEnabled('undo', false);
-          this.ui.changeHelpButtonEnabled('reset', false);
+          // this.ui.changeHelpButtonEnabled('reset', false);
         }
         this.ui.resizeEditor();
       },
@@ -412,7 +412,7 @@ export default {
         this.activeObjectId = obj.id;
 
         this.ui.changeHelpButtonEnabled('delete', true);
-        this.ui.changeHelpButtonEnabled('deleteAll', true);
+        // this.ui.changeHelpButtonEnabled('deleteAll', true);
 
         if (obj.type === 'cropzone') {
           this.ui.crop.changeApplyButtonStatus(true);

@@ -8,7 +8,7 @@ import { keyMirror } from './util';
  * Editor help features
  * @type {Array.<string>}
  */
-export const HELP_MENUS = ['undo', 'redo', 'reset', 'delete', 'deleteAll'];
+export const HELP_MENUS = ['undo', 'redo', 'delete'];
 
 /**
  * Filter name value map
