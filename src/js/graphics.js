@@ -1066,7 +1066,6 @@ class Graphics {
           hGridLines.push(line);
           canvas.add(line);
         }
-        /*
         var renderControl = function(ctx, left, top, styleOverride, fabricObject) {
             var size = this.cornerSize;
             ctx.save();
@@ -1079,26 +1078,66 @@ class Graphics {
             ctx.restore();
         }
         var testLine = new fabric.Line([30, 30, 300, 300], { stroke: '#000', strokeUniform: true, strokeWidth: 5});
-        testLine.controls.deleteControl = new fabric.Control({
-          x: 0.25,
-          y: 0.25,
+        testLine.controls.innerLineControlPt = new fabric.Control({
+          x: 0.27,
+          y: 0.22,
           offsetY: 16,
           cursorStyle: 'pointer',
           mouseUpHandler: function(){},
           actionHandler: function(eventData, transform, x, y) {
+              const canvasYTop = canvas.vptCoords.tl.y;
+              const canvasYBottom = canvas.vptCoords.br.y;
+              const canvasHeight = canvas.vptCoords.br.y - canvasYTop;
+
+              const canvasXLeft = canvas.vptCoords.tl.x;
+              const canvasXRight = canvas.vptCoords.tr.x;
+              const canvasWidth = canvas.vptCoords.br.x - canvasXLeft;
+
               var target = transform.target,
                   localPoint = fabric.controlsUtils.getLocalPoint(
                                     transform, transform.originX, transform.originY, x, y),
                   strokePadding = target.strokeWidth / (target.strokeUniform ? target.scaleX : 1),
-                  newWidth = Math.abs(localPoint.x / target.scaleX) - strokePadding;
-              target.set('width', Math.max(newWidth, 0));
+                  // TODO - handle moving over the edge and flipping the object
+                  newWidth = localPoint.x / target.scaleX - strokePadding,
+                  newWidth2 = canvasXRight - target.left,
+                  newHeight = localPoint.y / target.scaleY - strokePadding,
+                  newHeight2 = target.top + (canvasXRight - target.left) * ((localPoint.y - target.top) / (target.left - localPoint.x))
+
+              // adjust veritical line heights to match the viewport
+              /*
+              vGridLines.forEach(function (line) {
+                line.top = canvasYTop;
+                line.height = canvasHeight;
+                line.setCoords();
+              });
+              */
+
+              // adjust horizontal line lengths to match the viewport
+              /*
+              hGridLines.forEach(function (line) {
+                // console.log("set left and width");
+                // console.log(canvasXLeft, canvasWidth);
+                line.left = canvasXLeft;
+                line.width = canvasWidth;
+                line.setCoords();
+              });
+              */
+
+
+              console.log(target.left, target.top, newWidth2, newHeight2, localPoint.x, localPoint.y);
+              //testLine.controls.innerLineControlPt.x = ((localPoint.x - target.left) - (newWidth2) * .5 ) / ((newWidth2) * .5);
+              //testLine.controls.innerLineControlPt.y = (localPoint.y - target.top) / (newHeight2) - .5 * (newHeight / newWidth);
+              console.log(testLine.controls.innerLineControlPt.x, testLine.controls.innerLineControlPt.y);
+              target.set('width', Math.max(newWidth2, 0));
+
+              target.set('height', Math.max(newHeight2, 0));
               return true;
             },
           render: renderControl,
           cornerSize: 50
         });
         canvas.add(testLine);
-        */
+
         fixGrid();
         this._canvas.renderAll();
       }.bind(this),
@@ -1112,7 +1151,7 @@ class Graphics {
       if (zoom > 20) zoom = 20;
       if (zoom < 0.1) zoom = 0.1;
       // TODO - I'm pretty sure this is a little off
-      canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
+      canvas.zoomToPoint({ x: opt.e.offsetX * 2, y: opt.e.offsetY * 2 }, zoom);
       fixGrid();
       opt.e.preventDefault();
       opt.e.stopPropagation();
