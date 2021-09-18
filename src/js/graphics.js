@@ -1066,45 +1066,57 @@ class Graphics {
           hGridLines.push(line);
           canvas.add(line);
         }
-        var renderControl = function(ctx, left, top, styleOverride, fabricObject) {
-            var size = this.cornerSize;
-            ctx.save();
-            ctx.translate(left, top);
-            ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
-            ctx.fillStyle = 'green';
-            ctx.beginPath();
-            ctx.arc(0, 0, size/4, 0, Math.PI * 2, true);
-            ctx.fill();
-            ctx.restore();
-        }
-        var testLine = new fabric.Line([30, 30, 300, 300], { stroke: '#000', strokeUniform: true, strokeWidth: 5});
+        const renderControl = function (ctx, left, top, styleOverride, fabricObject) {
+          const size = this.cornerSize;
+          ctx.save();
+          ctx.translate(left, top);
+          ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
+          ctx.fillStyle = 'green';
+          ctx.beginPath();
+          ctx.arc(0, 0, size / 4, 0, Math.PI * 2, true);
+          ctx.fill();
+          ctx.restore();
+        };
+        const testLine = new fabric.Line([30, 30, 300, 300], {
+          stroke: '#000',
+          strokeUniform: true,
+          strokeWidth: 5,
+        });
         testLine.controls.innerLineControlPt = new fabric.Control({
           x: 0.27,
           y: 0.22,
           offsetY: 16,
           cursorStyle: 'pointer',
-          mouseUpHandler: function(){},
-          actionHandler: function(eventData, transform, x, y) {
-              const canvasYTop = canvas.vptCoords.tl.y;
-              const canvasYBottom = canvas.vptCoords.br.y;
-              const canvasHeight = canvas.vptCoords.br.y - canvasYTop;
+          mouseUpHandler: () => {},
+          actionHandler: (eventData, transform, x, y) => {
+            // const canvasYTop = canvas.vptCoords.tl.y;
+            // const canvasYBottom = canvas.vptCoords.br.y;
+            // const canvasHeight = canvas.vptCoords.br.y - canvasYTop;
 
-              const canvasXLeft = canvas.vptCoords.tl.x;
-              const canvasXRight = canvas.vptCoords.tr.x;
-              const canvasWidth = canvas.vptCoords.br.x - canvasXLeft;
+            // const canvasXLeft = canvas.vptCoords.tl.x;
+            const canvasXRight = canvas.vptCoords.tr.x;
+            // const canvasWidth = canvas.vptCoords.br.x - canvasXLeft;
 
-              var target = transform.target,
-                  localPoint = fabric.controlsUtils.getLocalPoint(
-                                    transform, transform.originX, transform.originY, x, y),
-                  strokePadding = target.strokeWidth / (target.strokeUniform ? target.scaleX : 1),
-                  // TODO - handle moving over the edge and flipping the object
-                  newWidth = localPoint.x / target.scaleX - strokePadding,
-                  newWidth2 = canvasXRight - target.left,
-                  newHeight = localPoint.y / target.scaleY - strokePadding,
-                  newHeight2 = target.top + (canvasXRight - target.left) * ((localPoint.y - target.top) / (target.left - localPoint.x))
+            const target = { transform },
+              localPoint = fabric.controlsUtils.getLocalPoint(
+                transform,
+                transform.originX,
+                transform.originY,
+                x,
+                y
+              ),
+              // strokePadding = target.strokeWidth / (target.strokeUniform ? target.scaleX : 1),
+              // TODO - handle moving over the edge and flipping the object
+              // newWidth = localPoint.x / target.scaleX - strokePadding,
+              newWidth2 = canvasXRight - target.left,
+              // newHeight = localPoint.y / target.scaleY - strokePadding,
+              newHeight2 =
+                target.top +
+                (canvasXRight - target.left) *
+                  ((localPoint.y - target.top) / (target.left - localPoint.x));
 
-              // adjust veritical line heights to match the viewport
-              /*
+            // adjust veritical line heights to match the viewport
+            /*
               vGridLines.forEach(function (line) {
                 line.top = canvasYTop;
                 line.height = canvasHeight;
@@ -1112,8 +1124,8 @@ class Graphics {
               });
               */
 
-              // adjust horizontal line lengths to match the viewport
-              /*
+            // adjust horizontal line lengths to match the viewport
+            /*
               hGridLines.forEach(function (line) {
                 // console.log("set left and width");
                 // console.log(canvasXLeft, canvasWidth);
@@ -1123,18 +1135,21 @@ class Graphics {
               });
               */
 
+            console.log(target.left, target.top, newWidth2, newHeight2, localPoint.x, localPoint.y);
+            // testLine.controls.innerLineControlPt.y = (localPoint.y - target.top) / (newHeight2) - .5 * (newHeight / newWidth);
+            // testLine.controls.innerLineControlPt.x = ((localPoint.x - target.left) - (newWidth2) * .5 ) / ((newWidth2) * .5);
+            console.log(
+              testLine.controls.innerLineControlPt.x,
+              testLine.controls.innerLineControlPt.y
+            );
+            target.set('width', Math.max(newWidth2, 0));
 
-              console.log(target.left, target.top, newWidth2, newHeight2, localPoint.x, localPoint.y);
-              //testLine.controls.innerLineControlPt.x = ((localPoint.x - target.left) - (newWidth2) * .5 ) / ((newWidth2) * .5);
-              //testLine.controls.innerLineControlPt.y = (localPoint.y - target.top) / (newHeight2) - .5 * (newHeight / newWidth);
-              console.log(testLine.controls.innerLineControlPt.x, testLine.controls.innerLineControlPt.y);
-              target.set('width', Math.max(newWidth2, 0));
+            target.set('height', Math.max(newHeight2, 0));
 
-              target.set('height', Math.max(newHeight2, 0));
-              return true;
-            },
+            return true;
+          },
           render: renderControl,
-          cornerSize: 50
+          cornerSize: 50,
         });
         canvas.add(testLine);
 
