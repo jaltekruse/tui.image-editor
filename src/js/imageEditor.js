@@ -612,6 +612,8 @@ class ImageEditor {
    * imageEditor.undo();
    */
   undo() {
+    this.discardSelection();
+
     return this._invoker.undo();
   }
 
@@ -622,6 +624,8 @@ class ImageEditor {
    * imageEditor.redo();
    */
   redo() {
+    this.discardSelection();
+
     return this._invoker.redo();
   }
 
