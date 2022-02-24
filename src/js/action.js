@@ -285,10 +285,10 @@ export default {
           if (this.activeObjectId) {
             this.changeShape(this.activeObjectId, changeShapeObject, isSilent);
           } else {
-            this.setDrawingShape(this.ui.shape.type, {
-              ...this.ui.shape.options,
-              ...changeShapeObject,
-            });
+            this.setDrawingShape(
+              this.ui.shape.type,
+              Object.assign(this.ui.shape.options, changeShapeObject)
+            );
           }
         },
         setDrawingShape: (shapeType) => {
