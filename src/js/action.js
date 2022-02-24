@@ -426,10 +426,15 @@ export default {
           if (this.ui.submenu !== 'shape') {
             this.ui.changeMenu('shape', false, false);
           }
+
+          var fill = obj.fill;
+          if (fill.color) {
+            fill = fill.color;
+          }
           this.ui.shape.setShapeStatus({
             strokeColor: obj.stroke,
             strokeWidth: obj.strokeWidth,
-            fillColor: obj.fill.color,
+            fillColor: fill,
           });
 
           //this.ui.shape.setMaxStrokeValue(Math.min(obj.width, obj.height));
